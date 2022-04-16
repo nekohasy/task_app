@@ -1,10 +1,34 @@
-<p style="color: green"><%= notice %></p>
+    <h3>スケジュール詳細</h3>
 
-<%= render @task %>
-
-<div>
-  <%= link_to "Edit this task", edit_task_path(@task) %> |
-  <%= link_to "Back to tasks", tasks_path %>
-
-  <%= button_to "Destroy this task", @task, method: :delete %>
-</div>
+    <table>
+      <tr>
+        <th>タイトル</th>
+        <td><%= @task.title %></td>
+      </tr>
+      <tr>
+        <th>開始日</th>
+        <td><%= @task.post_start_at %></td>
+      </tr>
+      <tr>
+        <th>投稿日時</th>
+        <td><%= @task.updated_at %></td>
+      </tr>
+      <tr>
+        <th>終日</th>
+        <td>
+          <% if @task.post_is_all_day %>
+            ○
+          <% end %>
+        </td>
+      </tr>
+      <tr>
+        <th>スケジュールメモ</th>
+        <td><%= @task.post_memo %></td>
+      </tr>
+    </table>
+    
+    <div>
+      <ul>
+        <li><%= link_to "スケジュール一覧に戻る", :tasks %></li>
+      </ul>
+    </div>

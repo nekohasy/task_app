@@ -1,5 +1,5 @@
     <h3>スケジュール一覧</h3>
- 
+
     <table>
       <thead>
         <tr>
@@ -9,21 +9,29 @@
           <th>終了日</th>
           <th>終日</th>
           <th>スケジュール更新日時</th>
+          <th>確認</th>
         </tr>
       </thead>
- 
+
       <tbody>
-        <% @tasks.each do |tasks| %>
+        <% @tasks.each do |task| %>
           <tr>
             <td><%= task.id %></td>
             <td><%= task.title %></td>
             <td><%= task.post_start_at %></td>
             <td><%= task.post_end_at %></td>
-            <td><%= task.post_is_all_day %></td>
+            <td>
+              <% if task.post_is_all_day %>
+                ○
+              <% end %>
+            </td>
             <td><%= task.updated_at %></td>
+            <td>
+              <%= link_to "確認", task %>
+            </td>
           </tr>
         <% end %>
       </tbody>
     </table>
- 
+    
     <p><%= link_to "スケジュール新規登録", :new_task %></p>

@@ -1,22 +1,22 @@
     <h3>スケジュール新規作成</h3>
- 
+
     <%= form_with model: @task do |f| %>
       <table>
         <tr>
           <th><%= f.label :title ,"タイトル" %></th>
           <td><%= f.text_field :title %></td>
         </tr>
- 
+
         <tr>
           <th><%= f.label :post_start_at ,"開始日" %></th>
           <td><%= f.date_field :post_start_at %></td>
         </tr>
- 
+
         <tr>
           <th><%= f.label :post_end_at ,"終了日" %></th>
           <td><%= f.date_field :post_end_at %></td>
         </tr>
- 
+
         <tr>
           <th><%= f.label :post_is_all_day ,"終日" %></th>
           <td><%= f.check_box :post_is_all_day %><br>終日の場合はチェックを入れます</td>
@@ -27,7 +27,7 @@
           <td><%= f.text_area :post_memo %></td>
         </tr>
       </table>
- 
+      
       <div>
         <ul>
           <li><%= f.submit "スケジュールを新規登録する"%></li>
