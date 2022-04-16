@@ -1,0 +1,40 @@
+    <h2>スケジュール詳細</h2>
+
+    <table>
+      <tr>
+        <th>タイトル</th>
+        <td><%= @task.title %></td>
+      </tr>
+      <tr>
+        <th>開始日</th>
+        <td><%= @task.post_start_at %></td>
+      </tr>
+      <tr>
+        <th>終了日</th>
+        <td><%= @task.post_end_at %></td>
+      </tr>
+      <tr>
+        <th>終日</th>
+        <td>
+          <% if @task.post_is_all_day %>
+            ○
+          <% end %>
+        </td>
+      </tr>
+      <tr>
+        <th>スケジュールメモ</th>
+        <td><%= @task.post_memo %></td>
+      </tr>
+    </table>
+
+    <div>
+      <ul>
+        <li><%= link_to "スケジュール一覧に戻る", :tasks %></li>
+      </ul>
+      <ul>
+        <li><%= link_to "スケジュールを編集する", [:edit, @task] %></li>
+      </ul>
+      <ul>
+        <li><%= link_to "スケジュールを削除", @task, data: { turbo_method: :delete, turbo_confirm: "本当に削除しますか？" } %></li>
+      </ul>
+    </div>

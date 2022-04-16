@@ -1,0 +1,8 @@
+  <footer>
+  <h1>
+    現在の日時 : <%= Time.current.strftime'%Y年%m月%d日' %>
+    <% if current_page?(tasks_path) %>
+      スケジュール合計 : <%= @tasks.count %>
+    <% end %>
+  </h1>
+  </footer>

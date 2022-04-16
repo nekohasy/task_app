@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  post_start_at: 2022-04-14
+  post_end_at: 2022-04-14
+  post_is_all_day: false
+  post_memo: MyText
+
+two:
+  title: MyString
+  post_start_at: 2022-04-14
+  post_end_at: 2022-04-14
+  post_is_all_day: false
+  post_memo: MyText
