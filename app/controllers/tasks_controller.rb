@@ -30,6 +30,7 @@ class TasksController < ApplicationController
         format.html { redirect_to :tasks, notice: "スケジュールを登録しました" }
         format.json { render :show, status: :created, location: @task }
       else
+        flash.now[:alert] = "スケジュールを登録できませんでした"
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @task.errors, status: :unprocessable_entity }
       end
@@ -54,7 +55,7 @@ class TasksController < ApplicationController
     @task.destroy
 
     respond_to do |format|
-      format.html { redirect_to :tasks, notice: "スケジュールを削除しました", status: :see_other }
+      format.html { redirect_to :tasks, alert: "スケジュールを削除しました", status: :see_other }
       format.json { head :no_content }
     end
   end
