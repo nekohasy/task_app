@@ -23,7 +23,7 @@ class TasksController < ApplicationController
 
   # POST /tasks or /tasks.json
   def create
-    @task = Task.new(task_params)
+    @task = Task.new(params.require(:task).permit(:title, :post_start_at, :post_end_at, :post_memo))
 
     respond_to do |format|
       if @task.save
