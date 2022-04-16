@@ -10,7 +10,15 @@
     <%= javascript_importmap_tags %>
   </head>
 
+  <header>
+  <h1>Ruby on Rails スケジュール管理アプリ</h1>
+  </header>
+
   <body>
-    <%= yield %>
+    <div class="main_contentainer">
+      <%= yield %>
+    </div>
   </body>
+  
+  <%= render 'layouts/footer' %>
 </html>

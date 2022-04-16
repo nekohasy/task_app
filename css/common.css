@@ -1,15 +1,27 @@
 header {
+  background-color: #C52F23;
   width: 100%;
-  padding: 15px;
-  margin-bottom: 30px;
-  border-bottom: 7px solid red;
+  padding: 10px;
+  margin: 0px;
+  color: #FFF;
 }
 
 footer {
+  background-color: #C52F23;
   width: 100%;
   padding: 15px;
-  margin-top: 30px;
-  border-top: 7px solid red;
+  margin: 0px;
+  color: #FFF;
+  position: absolute;
+  bottom: 0;
+}
+
+body {
+  margin: 0;
+}
+
+div {
+  padding: 15px;
 }
 
 .partial {
@@ -17,15 +29,37 @@ footer {
   padding: 15px;
 }
 
+table {
+  border-collapse: collapse;
+}
+
 table th {
   background-color: #FFDFE0;
   padding: 10px 20px;
+  border: solid 1px black;
 }
 
 table td {
   background-color: #FAEBEA;
   padding: 10px 20px;
   text-align: center;
+  border: solid 1px black;
+}
+
+input, pre {
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+}
+
+input[type=submit] {
+  width: auto;
+}
+
+textarea {
+  width: 350px;
+  height: 200px;
+  font-size: 16px;
 }
 
 .notice {
@@ -36,4 +70,12 @@ table td {
 .alert {
   background-color: #F6C5D0;
   padding: 5px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
 }
