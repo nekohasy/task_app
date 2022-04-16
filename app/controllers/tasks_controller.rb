@@ -54,7 +54,7 @@ class TasksController < ApplicationController
     @task.destroy
 
     respond_to do |format|
-      format.html { redirect_to tasks_url, notice: "Task was successfully destroyed." }
+      format.html { redirect_to :tasks, notice: "スケジュールを削除しました", status: :see_other }
       format.json { head :no_content }
     end
   end
